@@ -1,0 +1,47 @@
+programa
+{
+	inclua biblioteca Tipos --> tp
+	
+	funcao inicio()
+	{
+		real i, min = 999999999.0, max = 0.0, dif, cont = 1.0, soma_i = 0.0, tt = 0.0, min_max_soma = 0.0, x = 0.0, y = 0.0
+		faca{
+			escreva("Digite um inteiro: ")
+			leia(i)
+
+			se(i>=max){
+				max = i
+			}senao se(i<=min e i>0){
+				min = i
+			}
+			se(i>0){
+				soma_i += i
+				tt++
+			}
+		}enquanto(i>=0)
+		dif = (max - min) + 1
+		escreva("********SAIDA********\n")
+		x = soma_i/tt
+		enquanto(cont<=dif){
+			min_max_soma += cont
+			cont++ 
+			
+		}
+		cont = 1.0
+		y = min_max_soma/dif
+
+		se(x <= y){
+			enquanto(cont<=dif){
+				escreva(tp.real_para_inteiro(cont), " ")
+				cont++
+			}
+		}senao se (x > y){
+			enquanto(max>=min){
+			escreva(tp.real_para_inteiro(max), " ")
+			max--
+			}
+		}
+		escreva("\nMédia total: ", (x))
+		escreva("\nMédia Mínimo e Máximo: ", (y))
+	}
+}
